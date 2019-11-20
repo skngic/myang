@@ -1,4 +1,13 @@
 <h1>MyAng</h1>
+<button class="btn btn-primary" (click)="displayDetails = !displayDetails">Display Details</button>
+<p *ngIf="displayDetails">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, at, fugit, illo consequatur doloribus porro nam omnis nostrum beatae voluptas accusamus inventore? Reiciendis nulla corporis ipsa hic facilis ipsam iure?</p>
+
+<hr>
+<label>User Name:</label> 
+<input type="text" class="form-control" [(ngModel)]="userName">
+<p>User Name is: {{userName}}</p>
+<button class="btn btn-primary" [disabled]="userName === ''" (click)="delUserName()">Delete Name</button>
+<hr>
 <app-servers></app-servers>
 <app-warning-alert></app-warning-alert>
 <app-success-alert></app-success-alert>
